@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Study Assistant</h1>
+
+    <div id="chat-box"></div>
+
+    <input
+    type="text"
+    id="question"
+    placeholder="Ask your question">
+
+    <br><br>
+
+    <input
+    type="file"
+    id="pdfFile"
+    accept=".pdf">
+
+    <br><br>
+
+    <input
+    type="file"
+    id="imageFile"
+    accept="image/*">
+
+    <br><br>
+    <img id="preview"
+width="250"
+style="display:none;border-radius:10px;">
+
+    <button onclick="sendQuestion()">
+        Send
+    </button>
+
+</div>
+
+<script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+</html>
